@@ -7,6 +7,7 @@ import { Product } from '../../interfaces/product.interface';
   styleUrl: './form-product.component.css'
 })
 export class FormProductComponent {
+  
   @Output()
   public onNewProduct : EventEmitter<Product> = new EventEmitter()
   
@@ -21,8 +22,9 @@ export class FormProductComponent {
   }
   public emitProduct():void{
     this.onNewProduct.emit({...this.product})
+    console.log(this.product)
     this.product.name = ""
-    this.product.id = 0
+    this.product.id ++
     this.product.category = ""
     this.product.buyPrice = 0 
     this.product.sellPrice = 0

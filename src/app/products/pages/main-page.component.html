@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Gestión de Productos</h1>
+  
+    <!-- Componente de formulario para agregar productos -->
+    <form-product (onNewProduct)="addNewProduct($event)"></form-product>
+  
+    <!-- Componente de lista para mostrar los productos -->
+    <list-product [catalogList]="catalogList"></list-product>
+  </div>

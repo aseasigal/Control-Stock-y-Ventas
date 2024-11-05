@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
 import { ListClientsComponent } from './customers/components/list-clients/list-clients.component';
 import { FormClientsComponent } from './customers/components/form-clients/form-clients.component';
-import { FormsModule } from '@angular/forms';
 import { ProductsModule } from './products/products.module';
 
 @NgModule({

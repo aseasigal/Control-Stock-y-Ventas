@@ -7,7 +7,8 @@ import { Product } from '../../interfaces/product.interface';
   styleUrl: './list-product.component.css'
 })
 export class ListProductComponent {
-  // @Input()
-  // public catalogList : Product[] = []
+  
+  @Input()
+  public catalogList : Product[] = []
 
 }

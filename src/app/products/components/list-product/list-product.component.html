@@ -12,14 +12,14 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="let producto of productos"> -->
-          <!-- <td>{{ producto.id }}</td>
-          <td>{{ producto.nombre }}</td>
-          <td>{{ producto.categoria }}</td>
-          <td>{{ producto.precioCompra | currency }}</td>
-          <td>{{ producto.precioVenta | currency }}</td>
-          <td>{{ producto.stock }}</td> -->
-        <!-- </tr> -->
+        <tr *ngFor="let product of catalogList">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.category }}</td>
+          <td>{{ product.buyPrice | currency }}</td>
+          <td>{{ product.sellPrice | currency }}</td>
+          <td>{{ product.stock }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
