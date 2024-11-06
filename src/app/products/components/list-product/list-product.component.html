@@ -13,13 +13,36 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of catalogList">
-          <td>{{ product.id }}</td>
-          <td>{{ product.name }}</td>
-          <td>{{ product.category }}</td>
-          <td>{{ product.buyPrice | currency }}</td>
-          <td>{{ product.sellPrice | currency }}</td>
-          <td>{{ product.stock }}</td>
-        </tr>
+          <!-- PARA MODIFICAR EL PRODUCTO  -->
+          <td *ngIf="editingProductId === product.id">
+            <input type="text" [(ngModel)]="product.name" class="form-control" />
+          </td>
+          <td *ngIf="editingProductId === product.id">
+            <input type="text" [(ngModel)]="product.category" class="form-control" />
+          </td>
+          <td *ngIf="editingProductId === product.id">
+            <input type="number" [(ngModel)]="product.buyPrice" class="form-control" />
+          </td>
+          <td *ngIf="editingProductId === product.id">
+            <input type="number" [(ngModel)]="product.sellPrice" class="form-control" />
+          </td>
+          <td *ngIf="editingProductId === product.id">
+            <input type="number" [(ngModel)]="product.stock" class="form-control" />
+          </td>
+          <!-- PARA MOSTRAR EL PRODUCTO -->
+          <td *ngIf="editingProductId !== product.id">{{ product.name }}</td>
+          <td *ngIf="editingProductId !== product.id">{{ product.category }}</td>
+          <td *ngIf="editingProductId !== product.id">{{ product.buyPrice | currency }}</td>
+          <td *ngIf="editingProductId !== product.id">{{ product.sellPrice | currency }}</td>
+          <td *ngIf="editingProductId !== product.id">{{ product.stock }}</td>
+          
+          <td>
+            <button *ngIf="editingProductId !== product.id" (click)="editProduct(product.id)" class="btn btn-warning">Editar</button>
+            <button *ngIf="editingProductId === product.id" (click)="saveProduct(product)" class="btn btn-success">Guardar</button>
+            <button *ngIf="editingProductId === product.id" (click)="cancelEdit()" class="btn btn-secondary">Cancelar</button>
+          </td>
+
+          </tr>
       </tbody>
     </table>
   </div>

@@ -20,14 +20,16 @@ export class FormProductComponent {
     stock: 0,
     proveedor: "",
   }
-  public emitProduct():void{
-    this.onNewProduct.emit({...this.product})
-    console.log(this.product)
-    this.product.name = ""
-    this.product.id ++
-    this.product.category = ""
-    this.product.buyPrice = 0 
-    this.product.sellPrice = 0
-    this.product.stock = 0
+
+  public emitProduct(): void {
+      this.onNewProduct.emit({ ...this.product });
+      this.product.id ++
+      this.product.name= ""
+      this.product.category=""
+      this.product.buyPrice = 0
+      this.product.sellPrice = 0
+      this.product.stock= 0
+      this.product.proveedor=''
   }
+
 }
