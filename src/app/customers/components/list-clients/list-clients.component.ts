@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Customer } from '../../interfaces/customer.interface';
 
 @Component({
   selector: 'list-clients',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ListClientsComponent {
 
+    @Input()
+    public clientsList : Customer[] = []
 }

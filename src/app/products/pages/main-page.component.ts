@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Product } from '../interfaces/product.interface';
 
 @Component({
-  selector: 'main-page',
+  selector: 'main-page-products',
   templateUrl: './main-page.component.html',
 })
 export class MainPageComponent {

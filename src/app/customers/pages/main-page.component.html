@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Gestión de Clientes</h1>
+  
+    <!-- Componente de formulario para agregar productos -->
+    <form-clients (onNewClient)="addNewClient($event)"></form-clients>
+  
+    <!-- Componente de lista para mostrar los productos -->
+    <list-clients [clientsList]="customerList"></list-clients>
+  </div>

@@ -7,17 +7,15 @@
           <th>Nombre</th>
           <th>Dirección</th>
           <th>Teléfono</th>
-          <th>Email</th>
         </tr>
       </thead>
       <tbody>
-        <!-- <tr *ngFor="let cliente of clientes">
-          <td>{{ cliente.id }}</td>
-          <td>{{ cliente.nombre }}</td>
-          <td>{{ cliente.direccion }}</td>
-          <td>{{ cliente.telefono }}</td>
-          <td>{{ cliente.email || 'No especificado' }}</td>
-        </tr> -->
+        <tr *ngFor="let client of clientsList">
+          <td>{{ client.id }}</td>
+          <td>{{ client.name }}</td>
+          <td>{{ client.direction }}</td>
+          <td>{{ client.phone }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
